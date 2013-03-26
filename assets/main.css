@@ -1,0 +1,462 @@
+/*
+* Project Start: 18 December 2012
+* Project End: 1 January 2013
+* Developer: Nick Alekhine
+* Project Title: And Co International
+*/
+
+/*--------------------------------------------------------*/
+/* Setting up generic stuff */
+body {
+	padding:0px;	
+	margin:0px;	
+	background-color:#1a5b85;
+	background-image:url('background/background.png');
+	background-repeat:repeat;
+}
+
+/*--------------------------------------------------------*/
+/* Divs */
+div {
+	padding:0px;	
+	margin:0px;	
+	overflow:hidden;
+}
+div.container /* Main container for page. */ {
+	position:relative;
+	min-width:100%;
+}
+	div.header_container /* Container for header */ {
+		position:relative;
+		width:100%;
+	}
+		div.banner_container /* Container for banner */ {
+			width:100%;
+			margin:auto;
+			position:relative;
+			padding-bottom:10px;
+			background-color:#333333;
+			border-bottom:2px solid;
+			border-color:#083856;
+		}
+			div#banner_sub_container {
+				margin:auto;
+				max-width:1280px;
+			}
+				div#banner_sub_sub_container {
+					float:left;
+					width:519px;
+				}
+		div.admin_header /* For the admin menu in header */ {
+			float:right;
+			text-align:right;
+			padding:10px;
+			margin:10px;
+			border-radius:2px;
+			position:relative;
+			background-color:#e6e6e6;
+			display:block;
+			-moz-box-shadow: -1px 1px 0 1px #bbbbbb;
+			-webkit-box-shadow: -1px 1px 0 1px#bbbbbb;
+			box-shadow: -1px 1px 0 1px #bbbbbb;
+		}
+		div.main_nav_container /* Container for main navigation */ {
+			width:100%;
+			background-color:#262626;
+  			margin-bottom:10px;
+		}
+	div.meat /* Meat of the page */ { 
+		position:relative;
+		max-width:1280px;
+		margin:auto;
+		background-color:#ffffff;
+		-moz-box-shadow: -1px 1px 0 1px #9e9e9e;
+		-webkit-box-shadow: -1px 1px 0 1px#bbbbbb;
+		box-shadow: -1px 1px 0 1px #9e9e9e;
+		padding-bottom:80px;
+	}
+		div.meat_title /* Used for the header of the meat for most pages */ {
+			border-bottom:3px solid;
+			border-color:#333333;
+			padding-bottom:10px;
+		}
+		div.category_container /* Used as the container for category information */ {
+			position:relative;
+			padding-bottom:20px;
+			background-color:#e6e6e6;
+			display:block;
+			margin:10px;
+			border-radius:2px;
+			-moz-box-shadow: -1px 1px 0 1px #bbbbbb;
+			-webkit-box-shadow: -1px 1px 0 1px#bbbbbb;
+			box-shadow: -1px 1px 0 1px #bbbbbb;
+			padding-left:10px;
+		}
+			div.column_a {
+				width:80%;float:left;
+			}
+				div.solution_image_container /* Used specifically in views/categories.php for that small image on LHS */ {
+					position:relative;
+					float:left;
+				}
+			div.column_b {
+				float:right;text-align:right;
+				margin-right:20px;
+			}
+		div.solution_container /* Used as the container for solution information */ {
+			position:relative;
+			width:100%;
+			border-bottom:1px solid;
+			border-color:#333333;
+			margin-bottom:10px;
+		}
+			div#solution_info {
+				float:right;
+				margin-top:10px;
+				width:800px;
+			}
+		div.post_container /* This is used when submitting forms */ {
+			margin:10px;
+			overflow:hidden;
+		}	
+			div.post_title_container /* This is used when submitting forms */ {
+				margin-top:10px;
+				position:relative;
+				width:inherit;
+				height:25px;
+				border-radius:2px;
+				background-color:#6ca0c2;
+				overflow:visible;
+
+
+			}	
+			div.pointer /* This is the triangle thing for the form titles */ {
+				border-top-color:#6ca0c2;position: absolute;
+				left: 16px;top: 24px;width: 0;height: 0;
+				border-top: 10px solid #6ca0c2;border-left: 10px solid transparent;
+				border-right: 10px solid transparent;border-bottom: 0;z-index: 2;
+			}
+	div.footer_container /* Container for footer */ {
+	position:absolute;
+	bottom:0px;
+	width:100%;
+	
+	height:80px;
+	}
+		div.footer {
+			position:relative;
+			width:100%;max-width:1280px;
+			margin:auto;
+			height:100%;
+			background-color:#ffffff;
+			border-top:1px solid;
+			border-color:#969696;
+		}
+
+/*--------------------------------------------------------*/
+/* Links */
+a {
+	text-decoration:none;
+}
+a.banner /* Main banner for all pages */ {
+	background: url('../assets/banner/banner.png') no-repeat 0 0;
+	width:519px;height:119px;
+	text-indent: -9999px;
+	display:block;
+	margin-top:10px;
+	float:left;
+}
+a.banner:hover {
+	opacity:0.7;
+	filter:alpha(opacity=70); /* For IE8 and earlier */
+	cursor:pointer;
+}
+a.main_nav /* Main navigation element */ {
+	color:#fafafa;
+	display:block;
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	font-size:2em;
+	font-family: Open Sans, sans-serif;
+	font-weight:400;
+	background-color:transparent;
+	-webkit-transition: 
+		color .25s linear,
+		background-color .25s linear;
+	-moz-transition: 
+		color .25s linear,
+		background-color .25s linear;
+}
+a.main_nav:hover {
+	color:#333333;
+	background-color:#ffffff;
+}
+a.title {
+	color:#1a5b85;
+	font-size:1.5em;
+	font-family:Open Sans, sans-serif;
+	font-weight:400;
+	margin:0;
+	padding:0;
+}
+a.title:hover {
+	text-decoration: underline;
+}
+a.link_t1 {
+	color:#4d94c2;
+	font-size:1em;
+	font-family:'Open Sans', sans-serif;
+	text-decoration:none;
+}
+a.link_t1:hover {
+	text-decoration:underline;
+}
+a.link_t2 {
+	color:#4d94c2;
+	font-size:1em;
+	font-family:'Open Sans', sans-serif;
+	text-decoration:none;
+}
+a.link_t2:hover {
+	text-decoration: underline;
+}
+a.category_list {
+	color:#333333;
+	display:block;
+	text-align:left;
+	height:30px;
+	line-height:30px;
+	font-size:1.5em;
+	font-family: Open Sans, sans-serif;
+	-webkit-transition: 
+	color .25s linear,
+	background-color .25s linear;
+}
+a.category_list:hover {
+	background-color:#083856;
+}
+
+/*--------------------------------------------------------*/
+/* Lists */
+ul.main_nav /*Used in main navigation bar*/
+	{list-style-type:none;margin:0;padding:0;overflow:hidden;width:100%;max-width:1280px;margin:auto;}
+
+li.main_nav /*Used in main navigation bar*/
+	{float:left;width:25%;}
+
+ul.category_list /*Used in  category list nav*/
+	{list-style-type:none;margin:0;padding:0;overflow:hidden;width:100%;}
+
+li.category_list /*Used in category list nav*/
+	{width:100%;}
+
+
+/*--------------------------------------------------------*/
+/* Tables */
+table {
+	padding:0px;
+	margin:0px;
+}
+
+/*--------------------------------------------------------*/
+/* Text */
+p {
+	color:#000000;
+	font-size:1em;
+	font-family: Didact Gothic, sans-serif;
+	margin:0;
+	padding:0;
+}
+p.postinfo {
+	font-family:monospace;
+	font-weight:200;
+	font-size:.9em;
+}
+p.form_title {
+	float:left;
+}
+p.small {
+	font-size:.8em;
+}
+h1 {
+	color:#333333;
+	font-size:3.5em;
+	font-family: Open Sans, sans-serif;
+	font-weight:400;
+	margin:0;
+	padding:0;
+	margin-left:10px;
+}
+h1.small {
+	font-size:2.7em;
+}
+h2 {
+	color:#212121;
+	font-size:2.5em;
+	font-family: Open Sans, sans-serif;
+	font-weight:200;
+	margin:0;
+	padding:0;
+}
+h2.form_title {
+	float:left;
+	font-size:2em;
+	padding-left:10px;
+}
+h3 {
+	color:#414141;
+	font-size:1.5em;
+	font-family:Open Sans, sans-serif;
+	font-weight:400;
+	margin:0;
+	padding:0;
+}
+h4 {
+	float:left;
+	line-height:25px;
+	padding: 0 0 0 8px;
+	margin:0;
+	font-size:1.1em;
+	color:#000000;
+	font-family: Open Sans, verdana;
+}
+
+textarea.forminput {
+	width:100%;border:1px solid #3e3e3e;height:50
+}
+
+/*--------------------------------------------------------*/
+/* Images */
+
+img.images {
+	box-shadow:0px 0px 10px #333333;
+	margin:15px;
+	padding:0px;
+}
+
+/*--------------------------------------------------------*/
+/* Forms */
+
+form.threadsearch
+	{text-align:left;padding:0px;margin-top:15px;}
+input.threadsearch
+	{width:200px;height:27px;font-family:sans-serif;font-size:115%;}
+input.search {
+	background: url('../assets/search.png') no-repeat 0 0;
+	width:31;
+	height:27;
+	text-indent: -9999px;
+	display:inline;
+	border:none;
+	cursor:pointer;}
+input.search:hover {
+	opacity:0.7;
+	filter:alpha(opacity=70); /* For IE8 and earlier */
+	cursor:pointer;
+}
+input.search:active {
+	opacity:0.7;
+	filter:alpha(opacity=70); /* For IE8 and earlier */
+	cursor:pointer;
+}
+
+
+/*----------------Image Slide Show----------------*/
+
+div.bgcarousel{ /* CSS for main carousel container */
+background: black url(assets/bgcarousel/ajaxload.gif) center center no-repeat; /* loading gif while caoursel is loading */
+width:1260px; /* default dimensions of carousel */
+height:480px;
+box-shadow:0px 0px 5px #333333;
+margin: 15px auto;
+}
+
+img.navbutton{ /* CSS for the nav buttons */
+margin:0px;
+opacity:0.8;
+}
+img.navbutton:hover{
+opacity:1;
+}
+
+div.slide{ /* CSS for each image's DIV container within main container */
+background-color: black;
+background-position: center center; /* center image within carousel */
+background-repeat: no-repeat;
+background-size: cover; /* CSS3 property to scale image within container? "cover" or "contain" */
+color: black;
+}
+
+div.selectedslide{ /* CSS for currently selected slide */
+}
+
+div.slide div.desc{ /* DIV that contains the textual description inside .slide */
+position: absolute;
+color: white;
+left: 0px;
+bottom: 0px;
+width:100%;
+padding: 10px;
+font: bold 1.3em Open Sans, Arial;
+/*text-shadow: 0 -1px 1px #8a8a8a;*/ /* CSS3 text shadow */
+z-index:5;
+background-color:#262626;
+opacity:.95;
+}
+
+div.selectedslide div.desc{ /* CSS for currently selected slide's desc div */
+}
+
+div.slide div.desc h2{
+font-size:150%;
+margin:0;
+}
+
+div.slide div.desc a{
+color:#4d94c2;
+text-decoration:none;
+}
+
+div.slide div.desc a:hover{
+text-decoration:underline;
+}
+
+
+/*----------------------- End Image Slide Show ----------------------*/
+
+
+/*--------------------------------------------------------*//*--------------------------------------------------------*/
+/* CSS specifically for index */
+
+div#index_image {
+	float:left;
+	width:40%;
+}
+	img#index_image { 
+
+	}
+div#index_paragraph {
+	float:right;
+	width:60%;
+	margin-top:10px;
+}
+
+/*--------------------------------------------------------*//*--------------------------------------------------------*/
+/* CSS specifically for about */
+
+div#about_paragraph {
+	float:left;
+	width:40%;
+	margin-top:10px;
+}
+div#about_image {
+	float:right;
+	width:60%;
+}
+	img#about_image {
+
+	}
+
+
+

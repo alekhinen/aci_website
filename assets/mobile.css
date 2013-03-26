@@ -1,0 +1,309 @@
+/*
+* AndCoInt
+* Developed by Nick Alekhine
+* Mobile CSS
+*/
+@media screen and (max-width: 1680px) {
+}
+
+@media screen and (max-width: 1024px) {
+	/*--------------------------------------------------------*/
+	/*Divs*/
+
+	div#solution_info {
+		float:inherit;
+		width:inherit;
+	}
+
+	/*--------------------------------------------------------*/
+	/* Links */
+
+	a.title {
+		margin-right:10px;
+	}
+	a.link_t1 {
+		margin-right:10px;
+	}
+
+	/*--------------------------------------------------------*/
+	/* Lists */
+
+
+	/*--------------------------------------------------------*/
+	/* Tables */
+
+
+	/*--------------------------------------------------------*/
+	/* Text */
+
+	
+	p {
+		margin-right:10px;
+	}
+	p.postinfo {
+		margin-right:10px;
+	}
+	p.small {
+		margin-right:10px;
+	}
+	h1 {
+		font-size:2.8em;
+		margin-right:10px;
+	}
+	h1.small {
+		font-size:2.3em;
+	}
+	h2 {
+		margin-right:10px;
+	}
+	h2.form_title {
+		margin-right:10px;
+	}
+	h3 {
+		margin-right:10px;
+	}
+
+	/*--------------------------------------------------------*/
+	/* Images */
+
+	/*--------------------------------------------------------*//*--------------------------------------------------------*/
+	/* CSS specifically for index */
+
+	div#index_image {
+		float:inherit;
+		width:509px;
+		margin:auto;
+	}
+	div#index_paragraph {
+		float:inherit;
+		width:inherit;
+		margin:auto;
+	}
+
+	/*--------------------------------------------------------*//*--------------------------------------------------------*/
+	/* CSS specifically for about */
+
+	div#about_paragraph {
+		float:inherit;
+		width:inherit;
+		margin-top:10px;
+	}
+	div#about_image {
+		float:inherit;
+		width:inherit;
+		margin:auto;
+	}
+		img#about_image {
+			
+		}
+
+}
+
+@media screen and (max-width: 720px) {
+	/*--------------------------------------------------------*/
+	/*Divs*/
+
+	div.column_a {
+		width:100%;
+		float:inherit;
+	}
+	div.column_b {
+		float:inherit;
+		width:100%;
+		margin-top:5px;
+		text-align:left;
+	}
+	div.post_container {
+		margin-left:10px;
+	}
+	div#banner_sub_container {
+				float:inherit;
+				margin:auto;
+			}
+			
+	div#bgcarousel_shell
+		{display:none;}
+
+	/*--------------------------------------------------------*/
+	/* Links */
+
+	/*--------------------------------------------------------*/
+	/* Lists */
+
+
+	/*--------------------------------------------------------*/
+	/* Tables */
+
+
+	/*--------------------------------------------------------*/
+	/* Text */
+
+	p {
+		font-size:.9em;
+	}
+	p.postinfo {
+		font-size:.8em;
+	}
+	p.small {
+		font-size:.7em;
+	}
+	h1 {
+		font-size:1.9em;
+	}
+	h1.small {
+		font-size:1.7em;
+	}
+	h2 {
+		font-size:1.6em;
+	}
+	h2.form_title {
+		font-size:1.6em
+	}
+	h3 {
+		font-size:1.3em;
+	}
+
+	/*--------------------------------------------------------*/
+	/* Images */
+
+	/*--------------------------------------------------------*//*--------------------------------------------------------*/
+	/* CSS specifically for about */
+
+	img#about_image {
+		width:680px;
+		height:449px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	/*--------------------------------------------------------*/
+	/*Divs*/
+	div.meat {
+		padding-bottom:150px;
+	}
+
+	div.solution_image_container /* Used specifically in views/categories.php for that small image on LHS */ {
+					float:inherit;
+					margin:auto;
+				}
+
+	div.footer_container /* Container for footer */ {
+	height:150px;
+	}
+
+	div#banner_sub_sub_container {
+		float:inherit;
+					margin:auto;
+					width:285px;
+				}
+
+	/*--------------------------------------------------------*/
+	/* Links */
+	a.banner {
+		width:255px;
+		margin:15px auto;
+	}
+
+	
+
+	a.banner:hover {
+		
+		opacity:0.7;
+		filter:alpha(opacity=70); /* For IE8 and earlier */
+		cursor:pointer;
+	}
+
+	a.main_nav /* Main navigation element */ {
+		font-size:1.3em;
+	}
+
+	/*--------------------------------------------------------*/
+	/* Lists */
+
+
+	/*--------------------------------------------------------*/
+	/* Tables */
+
+
+	/*--------------------------------------------------------*/
+	/* Text */
+
+	h1 {
+		font-size:1.6em;
+	}
+	h1.small {
+		font-size:1.4em;
+	}
+	h2 {
+		font-size:1.4em;
+	}
+	h2.form_title {
+		font-size:1.4em
+	}
+	h3 {
+		font-size:1.1em;
+	}
+
+
+	/*--------------------------------------------------------*/
+	/* Images */
+
+	/*--------------------------------------------------------*//*--------------------------------------------------------*/
+	/* CSS specifically for index */
+
+	img#index_image {
+		width:420px;
+		height:290px;
+	}
+
+	/*--------------------------------------------------------*//*--------------------------------------------------------*/
+	/* CSS specifically for about */
+
+	img#about_image {
+		width:420px;
+		height:277px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	/*--------------------------------------------------------*/
+	/*Divs*/
+
+	/*--------------------------------------------------------*/
+	/* Links */
+
+	a.main_nav /* Main navigation element */ {
+		font-size:1em;
+	}
+
+	/*--------------------------------------------------------*/
+	/* Lists */
+
+
+	/*--------------------------------------------------------*/
+	/* Tables */
+
+
+	/*--------------------------------------------------------*/
+	/* Text */
+
+
+	/*--------------------------------------------------------*/
+	/* Images */
+
+	/*--------------------------------------------------------*//*--------------------------------------------------------*/
+	/* CSS specifically for index */
+
+	img#index_image {
+		width:280px;
+		height:193px;
+	}
+
+	/*--------------------------------------------------------*//*--------------------------------------------------------*/
+	/* CSS specifically for about */
+
+	img#about_image {
+		width:280px;
+		height:185px;
+	}
+}
